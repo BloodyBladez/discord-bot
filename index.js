@@ -43,7 +43,7 @@ const {client} = eds.createBot({
         "Text-Fighting"
     ],
     footerIcon: [
-        assets.icons.text_fighting
+        assets.icons.bloodybladez_logo
     ],
     slashOnly: false,
     guildOnly: true,

@@ -1,4 +1,4 @@
-const termins_link = "https://discord.com/channels/1013085279583744050/1247877398368616530/1143131501337268244";
+const termins_link = "https://discord.com/channels/1247643927704633419/1247877398368616530/1272874983978172426";
 export const rules = {
 	"ТЕРМ": {
 		0: "Основные термины",
@@ -148,7 +148,7 @@ let authors = await resolveAuthors(authorsID, redactorsID, designersID)
 let rulesBaked = getRules();
 
 for (const embed of rulesBaked)
-    embed.color = assets.colors.ds_gray;
+    embed.color = assets.colors.default;
 
 rulesBaked.forEach(($, i) => {
     if ($.title?.includes("Основные термины"))
@@ -171,7 +171,7 @@ rulesBaked.at(0).author = {
 
 rulesBaked.at(-1).footer = {
     text: `『⚔』• Закон превыше всего! (да-да, знаю, вам наверняка лень всё это читать, а придётся).${authors}`,
-    icon_url: assets.icons.text_fighting
+    icon_url: assets.icons.bloodybladez_logo
 };
 
 const filesBaked = [];
@@ -194,8 +194,12 @@ for (const embed of rulesBaked)
 if (stack)
     filesBaked.push({ channelID: "1247877398368616530", message: { embeds: stack } });
 
-filesBaked[0].messageID = "1271563621381705730";
-filesBaked[1].messageID = "1271563625068367955";
-filesBaked[2].messageID = "1271563628289593446";
+filesBaked[0].messageID = "1272874983978172426";
+filesBaked[1].messageID = "1272874988503961681";
+filesBaked[2].messageID = "1272874992534556723";
+
+filesBaked.at(0).message.files = [{
+	attachment: "./assets/logo.png"
+}];
 
 export default filesBaked;
